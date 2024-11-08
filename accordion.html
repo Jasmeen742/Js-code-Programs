@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Accordion Program</title>
+        <style>
+          body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+}
+
+.accordionTitle {
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.accordionTitle + .accordionContent {
+  display: none;
+}
+
+.accordionTitle.is-open + .accordionContent {
+  display: block;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Accordion</h1>
+
+        <div>
+          <div class="accordionItem">
+            <h2 class="accordionTitle">Tab 1</h2>
+            <div class="accordionContent">
+              <p>Information here</p>
+            </div>
+          </div>
+      
+          <div class="accordionItem">
+            <h2 class="accordionTitle">Tab 2</h2>
+            <div class="accordionContent">
+              <p>Information here</p>
+            </div>
+          </div>
+      
+          <div class="accordionItem">
+            <h2 class="accordionTitle">Tab 3</h2>
+            <div class="accordionContent">
+              <p>Information here</p>
+            </div>
+          </div>
+        </div>
+    </body>
+    <script>
+        const accTitle = document.querySelectorAll('.accordionTitle');
+        accTitle.forEach((myFunc) => {
+            accTitle.addEventListener('click', function(e){
+                if(accTitle.classList.contains === "is-open"){
+                    accTitle.classList.remove = "is-open";
+                }else{
+                    const newElement = document.querySelectorAll('is-open');
+                    newElement.forEach((myFunc1) => {
+                        newElement.classList.remove('is-open')
+                    });
+                }
+                accordionTitle.classList.add("is-open");
+
+            });
+        })
+    </script>
+</html>
